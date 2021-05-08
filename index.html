@@ -1,6 +1,75 @@
 <html>
-    <head></head>
-    <body>
-        <h1>Hello, world!</h1>
-    </body>
+
+<head>
+    <style href="styles.css"></style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+    </style>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+
+        html,
+        body,
+        .main-content {
+            font-family: 'Noto Sans SC', sans-serif;
+            height: 100%;
+        }
+
+        .main-content {
+            margin: 0 auto;
+            padding: 20px 40px;
+            width: 800px;
+            background-color: #eee;
+        }
+
+        ul.unstyled {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.horizontal {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .tags {
+            column-gap: 10px;
+        }
+
+        .tags .tag {
+            padding: 0 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-content">
+        <h1>Dev blog</h1>
+
+        <div class="post">
+            <h2>Azure Functions v2 struggling with .NET Core 3</h2>
+
+            <div class="post-content">
+                <p>
+                    If you’re planning to immediately upgrade your V2 functions to use .NET Core 3 and (some of) the new 3.0.0 Nuget packages, think again. You may run into <a href="https://github.com/Azure/azure-functions-dotnet-extensions/issues/29">this</a>. To be fair I don’t think the team ever promised they’d be ready for .NET Core 3 on release day.
+                </p>
+
+                <p>
+                    Anyway it’s interesting that the first few preview versions of .NET Core 3 and the 3.0.0 Nuget packages did not break my functions, but after one update I started seeing issues like the one above. As exciting as it is, being an early adopter can be a rollercoaster sometimes.
+                </p>
+            </div>
+
+            <div class="post-meta">
+                <ul class="horizontal unstyled tags">
+                    <li class="tag">Azure Functions</li>
+                    <li class="tag">.NET Core 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
